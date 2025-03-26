@@ -1,0 +1,19 @@
+<view>
+	<view bind:tap="handleChange">姓名：{{name}}</view>
+	<view>兴趣爱好：</view>
+	<view>循环遍历时，默认使用 item 表示当前遍历到的元素，使用 index 表示当前元素的下标</view>
+	<view wx:for="{{hobbies}}" wx:key="*this">
+		<text>下标：{{index}}</text>
+		<text>元素：{{item}}</text>
+	</view>
+
+	<view class="test"></view>
+
+	<view wx:for="{{hobbies}}" wx:key="*this" wx:for-item="hobby">
+		<text>下标：{{index}}</text>
+		<text>元素：{{hobby}}</text>
+	</view>
+
+
+
+</view>
