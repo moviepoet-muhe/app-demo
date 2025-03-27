@@ -1,18 +1,39 @@
-/* index.wxss */
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh; /* 视口高度 */
+.search-bar {
+	width: 750rpx;
+	height: 120rpx;
+	background-color: #d81e06;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
-.title {
-  font-size: 24px;
-  margin-bottom: 20px;
+.search-input-container {
+	flex: 1;
+	position: relative;
 }
 
-.content {
-  font-size: 18px;
-  margin-bottom: 20px;
+.search-input {
+	flex: 1;
+	background-color: #ffffff;
+	height: 81rpx;
+	border-radius: 81rpx;
+	padding-left: 60rpx;
+	margin-left: 10rpx;
+}
+
+.search-icon {
+	position: absolute;
+	top: 16rpx;
+	left: 20rpx;
+}
+
+.search-login {
+	width: 120rpx;
+	font-size: 30rpx;
+	text-align: center;
+	color: #fff;
+}
+
+.scroll-category {
+	white-space: nowrap;
 }

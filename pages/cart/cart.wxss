@@ -1,8 +1,1 @@
 /* pages/cart/cart.wxss */
-
-.test {
-	/* display: flex; */
-	width: 100rpx;
-	height: 100rpx;
-	border: 1rpx solid red;
-}

@@ -1,14 +1,23 @@
-<!-- index.wxml -->
-<view class="container">
-  <!-- 页面标题 -->
-  <view class="title">{{name}}</view>
-	
-  <!-- 页面内容 -->
-  <view class="content">
-    <text>{{content}}</text>
+<view class="home">
+  <!-- 头部搜索栏 -->
+  <view class="search-bar">
+    <image src="/images/dianpu.png" style="width: 81rpx; height: 81rpx;" />
+    <view class="search-input-container">
+      <input type="text" placeholder="请输入搜索关键字" class="search-input" />
+      <icon type="search" class="search-icon" />
+    </view>
+    <view class="search-login">登录</view>
   </view>
-  
-  <!-- 页面按钮 -->
-  <button bindtap="onButtonClick">点击我</button>
-	<view>{{a}}</view>
+
+  <!-- 滚动分类 -->
+  <scroll-view class="scroll-category" scroll-x>
+    <text wx:for="{{ categories }}" wx:key="id">{{ item.name }}</text>
+  </scroll-view>
+
+  <!-- 轮播图 -->
+  <swiper autoplay circular indicator-dots indicator-active-color="#d81e06" interval="3000" style="width: 750rpx; height: 300rpx;">
+    <swiper-item wx:for="{{ banners }}" wx:key="id">
+      <image src="{{ item.image }}" style="width: 100%; height: 100%;" />
+    </swiper-item>
+  </swiper>
 </view>
