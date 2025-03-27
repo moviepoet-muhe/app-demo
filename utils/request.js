@@ -3,7 +3,7 @@
  */
 const baseURL = 'http://113.45.10.129:3000'
 
-const request = ({ url, method = 'GET', data, headers = {} } = {}) => {
+const httpRequest = ({ url, method = 'GET', data, headers = {} } = {}) => {
 	if (!url) {
 		throw new Error('网络请求必须传递 url')
 	}
@@ -51,16 +51,16 @@ const request = ({ url, method = 'GET', data, headers = {} } = {}) => {
 }
 
 // 基于 request() 封装 get 别名方法
-export const get = (url, data) => request({
+export const requestGet = (url, data) => httpRequest({
 	url,
 	data,
 })
 
 // 基于 request() 封装 post 别名方法
-export const post = (url, data) => request({
+export const requestPost = (url, data) => httpRequest({
 	url,
 	method: 'POST',
 	data,
 })
 
-export default request
+export default httpRequest

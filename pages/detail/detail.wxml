@@ -1,3 +1,11 @@
 <view>
-	详情
+	<view>通过点击图片跳转到详情页（使用wx.navigateTo跳转，通过自定义属性data-*和event.target.dataset传参）</view>
+	<view>商品ID：{{id}}</view>
+	<view>商品标题：{{title}}</view>
+	<view>商品价格：{{price}}</view>
+
+	<!-- <view>通过点击标题标签跳转到详情页（使用navigator标签url传参）</view>
+	<view>商品ID：{{id}}</view>
+	<view>商品标题：{{title}}</view>
+	<view>商品价格：{{price}}</view> -->
 </view>

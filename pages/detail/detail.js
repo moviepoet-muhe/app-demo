@@ -1,3 +1,4 @@
+
 // pages/detail/detail.js
 Page({
 
@@ -5,14 +6,18 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    id: 0,
+    title: '',
+    price: 0,
   },
 
   /**
    * 生命周期函数--监听页面加载
+   * 可以在回调函数的参数中，获取到跳转到当前页面时，路径中传递的 ? 查询字符串参数数据
    */
-  onLoad(options) {
-
+  onLoad(query) {
+    console.log(query);
+    this.setData(query)
   },
 
   /**
